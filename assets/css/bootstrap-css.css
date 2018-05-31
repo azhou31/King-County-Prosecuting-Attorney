@@ -29,10 +29,6 @@
     background-color: #3c3d41;
 	padding: 60px 40px;
 	color: rgba(255,255,255,1.00);
-	/* margin-bottom: 20px;
-	border-bottom-right-radius: 6px;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 6px; */
 }
 .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
@@ -77,17 +73,12 @@
 	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
 }
 
-
-@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
-@import url(http://fonts.googleapis.com/css?family=Gudea);
 .footer1 {
-    background: #fff url("../images/footer/footer-bg.png") repeat scroll left top;
+    background: #fff;
 	padding-top: 40px;
 	padding-right: 0;
 	padding-bottom: 20px;
-	padding-left: 0;/*	border-top-width: 4px;
-	border-top-style: solid;
-	border-top-color: #003;*/
+    padding-left: 0;
 }
 
 .title-widget {
