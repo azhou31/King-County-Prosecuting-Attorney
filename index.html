@@ -11,16 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i|Open+Sans:300,400,600,600i,700,800" rel="stylesheet">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript" 
-    src="assets/js/styles.js"></script>
-    </head>
+    src="assets/js/stickyNavBar.js"></script>
     <script type="text/javascript" src="assets/js/scrollReveal.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
     <body>
+        <div class="content">
         <nav class="navbar navbar-inverse resized" style="margin-bottom: 0px">
                 <div class="container">
                   <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,20 +43,11 @@
                       <li><a href="https://www.kingcounty.gov/">kingcounty.gov</a></li>
                       <li><a href="http://blue.kingcounty.gov/about/contact/">Contact Us</a></li>
                       <li><a href="https://www.kingcounty.gov/services.aspx">Services</a></li>
-                      <li>
-                            <div class="bfh-selectbox bfh-languages" data-language="en_US" data-available="en_US,fr_CA,es_MX" data-flags="true">
-                                    <input type="hidden" value="">
-                                    <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
-                                      <span class="bfh-selectbox-option input-medium" data-option=""></span>
-                                      <b class="caret"></b>
-                                    </a>
-                                    <div class="bfh-selectbox-options">
-                                    <div role="listbox">
-                                      <ul role="option">
-                                      </ul>
-                                    </div>
-                                    </div>
-                                  </div>
+                      <li style="margin-top:13px">
+                            <select class="selectpicker" data-width="fit">
+                                    <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+                                  <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
+                                </select>
                       </li>
                       <li>
                         <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse3">Search</a>
@@ -71,116 +64,144 @@
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container -->
               </nav><!-- /.navbar -->
+              </div>
 
-              
-              <nav class="navbar navbar-default navbar-attorney" style="margin-bottom: 0px" role="navigation">
+
+
+              <!--PROSECUTING ATTORNEY NAVBAR-->
+              <div class="navbar-attorney">
+              <nav class="navbar navbar-default" style="margin-bottom: 0px" >
                     <div class="container-fluid">
-                        <div class="navbar-brand">
-                            Prosecuting Attorney
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#attorneyNavBar">
+                                <span>Menu</span>
+                            </button>
+                            <a class="navbar-brand navbar-brand-left navbar-brand-center" href="#">Prosecuting Attorney</a>
                         </div>
-                      <ul class="nav navbar-nav">
+                      <ul class="nav navbar-nav navbar-right" id="attorneyNavBar">
                             <li class="active"><a href="#">HOME</a></li>
-                            <li><a href="#">ABOUT US</a></li>
-                            <li><a href="#">MEET US</a></li>                                 
+                            <li><a href="https://www.kingcounty.gov/depts/prosecutor/mission.aspx" class="dropdown-toggle" data-toggle="dropdown">ABOUT US</a></li>
+                            <li><a href="https://www.kingcounty.gov/depts/prosecutor/profiles-new.aspx">MEET US</a></li>                                 
                             <li class="dropdown">
-                              <a class="dropdown-toggle" data-toggle="dropdown" href="#">NEWS/MEDIA
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="https://www.kingcounty.gov/depts/prosecutor/news-media-center/news.aspx">NEWS/MEDIA
                               <span class="caret"></span></a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Videos</a></li>
-                                <li><a href="#">Newsletter: The Prosecutor's Post</a></li>
-                                <li><a href="#">Reports</a></li>
+                                <li><a href="https://www.kingcounty.gov/depts/prosecutor/news-media-center/news.aspx">News</a></li>
+                                <li><a href="https://www.kingcounty.gov/depts/prosecutor/news-media-center/videos.aspx">Videos</a></li>
+                                <li><a href="https://www.kingcounty.gov/depts/prosecutor/news-media-center/newsletter.aspx">Newsletter: The Prosecutor's Post</a></li>
+                                <li><a href="https://www.kingcounty.gov/depts/prosecutor/news-media-center/reports.aspx">Reports</a></li>
                               </ul>
                             </li>
+                            <li><a href="https://www.kingcounty.gov/depts/prosecutor/how-to.aspx">HOW TO...</a></li> 
                             <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">DIVISIONS
                                     <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                      <li><a href="#">Civil Division</a></li>
-                                      <li><a href="#">Criminal Division</a></li>
+                                      <li><a href="https://www.kingcounty.gov/depts/prosecutor/civil-division.aspx">Civil Division</a></li>
+                                      <li><a href="https://www.kingcounty.gov/depts/prosecutor/criminal-overview.aspx">Criminal Division</a></li>
                                     </ul>
                                   </li>
-                            <li><a href="#">NEWS/MEDIA</a></li>                            
-                            <li><a href="#">PROTECTION ORDERS</a></li>                            
-                            <li><a href="#">HOW TO...</a></li>                            
-                            <li><a href="#">CAREER OPPORTUNITIES</a></li>
+                            <li><a href="#">VICTIM/COMMUNITY SERVICES</a></li>                            
+                            <li><a href="https://www.kingcounty.gov/depts/prosecutor/protection-orders.aspx ">PROTECTION ORDERS</a></li>                                                       
+                            <li><a href="https://www.kingcounty.gov/depts/prosecutor/jobs.aspx">CAREERS</a></li>
                             <li><a href="#">CONTACT</a></li>
                           </ul>
-                    </div>
-                  </nav>
 
+                          <!-- Brand and toggle get grouped for better mobile display -->
+
+                  </nav>
+                  </div>
+                      
+
+<div class="content">
                   <!-- HERO -->
-        <section class="hero">
-            <div class="hero-inner">
-                <h1>JUSTICE</h1>
-                <h3>INTEGRITY. LEADERSHIP. COMPASSION. PROFESSIONALISM.</h3>
-                <a href="https://example.com/" class="btn">Go ahead...</a>
+        <section class="header__text-box">
+            <div class="header-text">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main" style="font-size:5vw">JUSTICE</span>
+                    <span class="heading-primary--sub">INTEGRITY. LEADERSHIP. 
+                        <Br>
+                            COMPASSION. PROFESSIONALISM.</span>
+                        </h1>
+                        <a href="https://www.kingcounty.gov/depts/prosecutor/mission.aspx" class="btn btn-secondary btn--animated">LEARN MORE</a>
             </div>
         </section>
+    </div>
 
         <!--SERVICES & PROGRAMS-->
-        <section class="services-section">
-            <div class="container">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <h3 style="text-align: center"> Community Services & Programs </h3>
-                    <p>Learn more about the services and programs that are available to your community!</p>
-                </div>
-                    <div class="row row-bottom-padded-md">
-                        <div class="card col-lg-4 col-md-4 services-card foo-1">
-                            <span><img class="img-responsive card-img-top" src="assets/images/service_icon.png" alt=""></span>
-                            <div class="card-content services">
-                                <h3 class="card-title">Protection Orders</h3>
-                                <p class="card-text">A Protection Order is a type of "restraining order" that you, (the petitioner), can file against another person, (the respondent), if you believe you have been a victim of domestic violence by the other person.</p>
-                                <p><a href="#" class="btn btn-primary">LEARN MORE<i class="icon-arrow-right"></i></a></p>
+        <div class="services-section">
+                <div class="container" style="padding: 60px 0px">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                                <h2> COMMUNITY SERVICES & PROGRAMS </h2>
+                                <p class="section-description">Learn more about the services and programs that are available to your community!</p>
                             </div>
+                  <div class="row hidden-md-up">
+                    <div class="col-md-4">
+                      <div class="card foo-1 services-card">
+                        <div class="card-block">
+                        <span><img class="img-responsive card-img-top center-block" src="assets/images/service_icon.png" alt=""></span>
+                          <h4 class="card-title">Protection Orders</h4>
+                          <p class="card-text services-card-text">A Protection Order is a type of "restraining order" that you, (the petitioner), can file against another person, (the respondent), if you believe you have been a victim of domestic violence by the other person.</p>
+                          <a href="https://www.kingcounty.gov/depts/prosecutor/protection-orders.aspx" class="btn btn-primary">Learn More</a>
+
                         </div>
-                        <div class="card col-lg-4 col-md-4 services-card foo-2">
-                            <span><img class="img-responsive card-img-top" src="assets/images/service_icon.png" alt=""></span>
-                                <div class=" card-content services">
-                                <h3 class="card-title">Child and Family Support</h3>
-                                <p class="card-text">Our mission is to promote family self-sufficiency and the well-being of children. Learn more about the services we offer.</p>
-                                <p><a href="#" class="btn btn-primary">LEARN MORE<i class="icon-arrow-right"></i></a></p>
-                                </div>
-                        </div>
-                        <div class="card col-lg-4 col-md-4 services-card foo-3">
-                            <span><img class="img-responsive card-img-top" src="assets/images/service_icon.png" alt=""></span>
-                                <div class="card-content services">
-                                <h3 class="card-title">Victim/Community Services</h3>
-                                <p class="card-text">Offering a wide range of services from intepreter services during prosecuting cases, elder abuse, and victim assistance. View for more details.</p>
-                                <p><a href="#" class="btn btn-primary">LEARN MORE<i class="icon-arrow-right"></i></a></p>
-                                </div>
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="card col-lg-4 col-md-4 services-card foo-4">
-                        <span><img class="img-responsive card-img-top" src="assets/images/service_icon.png" alt=""></span>
-                            <div class="card-content services">
-                            <h3 class="card-title">Youth Programs</h3>
-                            <p class="card-text">Offering an abundance of resources for youth. Such programs are designed to keep youth out of the criminal justice system...</p>
-                            <p><a href="#" class="btn btn-primary">LEARN MORE<i class="icon-arrow-right"></i></a></p>
-                        </div>
+                      </div>
                     </div>
-                    <div class="card col-lg-4 col-md-4 services-card foo-5">
-                        <span><img class="img-responsive card-img-top" src="assets/images/service_icon.png" alt=""></span>
-                            <div class="card-content services">
-                            <h3 class="card-title">Criminal Division</h3>
-                            <p class="card-text">The Criminal Division is the largest of four divisions in the King County Prosecutor's Office and is organized into several different units and sections. The Criminal Division represents the state and the county in criminal matters in the King County District and Superior courts, the state and federal courts of appeal, and the Washington and U.S. Supreme Courts.</p>
-                            <p><a href="#" class="btn btn-primary">LEARN MORE<i class="icon-arrow-right"></i></a></p>
+                    <div class="col-md-4">
+                      <div class="card foo-2 services-card">
+                        <div class="card-block">
+                        <span><img class="img-responsive card-img-top center-block" src="assets/images/service_icon.png" alt=""></span>
+                          <h4 class="card-title">Child and Family Support</h4>
+                          <p class="card-text services-card-text">Our mission is to promote family self-sufficiency and the well-being of children. Learn more about the services we offer.</p>
+                          <a href="https://www.kingcounty.gov/depts/prosecutor/child-support.aspx" class="btn btn-primary">Learn More</a>
                         </div>
+                      </div>
                     </div>
-                    <div class="card col-lg-4 col-md-4 services-card foo-4">
-                        <span><img class="img-responsive card-img-top" src="assets/images/service_icon.png" alt=""></span>
-                            <div class="card-content services">
-                            <h3 class="card-title">Civil Division</h3>
-                            <p class="card-text">
-                                    The Civil Division provides comprehensive legal services to King County government, including all County elected and appointed officials, department heads, and with the managers of numerous county agencies and departments.</p>
-                            <p><a href="#" class="btn btn-primary">LEARN MORE<i class="icon-arrow-right"></i></a></p>
-                            </div>
+                    <div class="col-md-4">
+                      <div class="card foo-3 services-card">
+                        <div class="card-block">
+                            <span><img class="img-responsive card-img-top center-block" src="assets/images/service_icon.png" alt=""></span>
+                          <h4 class="card-title">Victim/Community Services</h4>
+                          <p class="card-text services-card-text">Offering a wide range of services from intepreter services during prosecuting cases, elder abuse, and victim assistance. View for more details.</p>
+                          <a href="https://www.kingcounty.gov/depts/prosecutor/victim-community-support/victim-assistance.aspx" class="btn btn-primary">Learn More</a>
+                        </div>
+                      </div>
                     </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card foo-4 services-card">
+                        <div class="card-block">
+                                <span><img class="img-responsive card-img-top center-block" src="assets/images/service_icon.png" alt=""></span>
+                          <h4 class="card-title">Youth Programs</h4>
+                          <p class="card-text services-card-text">Offering an abundance of resources for youth. Such programs are designed to keep youth out of the criminal justice system...</p>
+                          <a href="https://www.kingcounty.gov/depts/prosecutor/youth-programs/juvenile-court.aspx" class="btn btn-primary">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card foo-5 services-card">
+                        <div class="card-block">
+                                <span><img class="img-responsive card-img-top center-block" src="assets/images/service_icon.png" alt=""></span>
+                          <h4 class="card-title">Criminal Division</h4>
+                          <p class="card-text services-card-text">The Criminal Division is the largest of four divisions in the King County Prosecutor's Office and is organized into several different units and sections.</p>
+                          <a href="https://www.kingcounty.gov/depts/prosecutor/criminal-overview.aspx" class="btn btn-primary">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card foo-3 services-card">
+                        <div class="card-block">
+                                <span><img class="img-responsive card-img-top center-block" src="assets/images/service_icon.png" alt=""></span>
+                          <h4 class="card-title">Civil Division</h4>
+                          <p class="card-text services-card-text">he Civil Division provides comprehensive legal services to King County government, including all County elected and appointed officials, department heads, and with the managers of numerous county agencies and departments.</p>
+                          <a href="https://www.kingcounty.gov/depts/prosecutor/civil-division.aspx" class="btn btn-primary">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-            </div>
-        </section>
+              </div>
 
         <!--NEWS-->
         <div class="arrow-down"></div>
@@ -188,20 +209,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center animate-box">
-                        <h2>Latest News & Announcements</h2>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                        <h2>LATEST NEWS & ANNOUNCEMENTS</h2>
+                        <i class="far fa-newspaper"></i>
+                        <p class="section-description">See whats happening in your community or follow us on social media!</p>
                     </div>
                 </div>
+
+                <!--
+                <div class="news">
                 <div class="row row-bottom-padded-md">
                     <div class="col-lg-4 col-md-4">
                         <div class="card animate-box newscard foo-1">
                             <a href="#"><img class="img-responsive" src="images/gallery-4.jpg" alt=""></a>
                             <div class="blog-text">
-                                <h3 class="card-title"><a href=""#>45 Minimal Worksspace Rooms for Web Savvys</a></h3>
-                                <span class="posted_on">Sep. 15th</span>
+                                <h4 class="card-title">Convictions and Death Sentence Affirmed in Schierman Case</h4>
+                                <span class="posted_on">April 12, 2018</span>
                                 <span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-                                <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <a href="#" class="btn btn-primary">Read More</a>
+                                <h6 class="card-subtitle text-muted">State v. Conner Michael Schierman</h6>
+                                <p class="card-text">Seattle, WA - The King County Prosecuting Attorney’s Office received the Washington State Supreme Court’s decision today...</p>
+                                <a href=""https://www.kingcounty.gov/depts/prosecutor/news-media-center/news/2018/April/Conner%20Michael%20Schierman.aspx"" class="btn btn-primary">Read More</a>
                             </div> 
                         </div>
                     </div>
@@ -209,10 +235,11 @@
                         <div class="card animate-box foo-2">
                             <a href="#"><img class="img-responsive" src="images/gallery-2.jpg" alt=""></a>
                             <div class="blog-text">
-                                <h3 class="card-title"><a href=""#>45 Minimal Worksspace Rooms for Web Savvys</a></h3>
-                                <span class="posted_on">Sep. 15th</span>
+                                <h4 class="card-title">Sentencing in Fatal Shooting in Pioneer Square in 2014</h4>
+                                <span class="posted_on">Oct. 20, 2017</span>
                                 <span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
-                                <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <h6 class="card-subtitle text-muted">State v. Kenneth Bernard Jones, Jr.</h6>
+                                <p class="card-text">Kenneth Bernard Jones, Jr., was sentenced this afternoon to 240 months in prison for a fatal shooting on September 24, 2014...</p>
                                 <a href="#" class="btn btn-primary">Read More</a>
                             </div> 
                         </div>
@@ -221,7 +248,7 @@
                         <div class="card animate-box foo-2">
                             <a href="#"><img class="img-responsive" src="images/gallery-3.jpg" alt=""></a>
                             <div class="blog-text">
-                                <h3 class="card-title"><a href=""#>45 Minimal Worksspace Rooms for Web Savvys</a></h3>
+                                <h3 class="card-title">45 Minimal Worksspace Rooms for Web Savvys</h3>
                                 <span class="posted_on">Sep. 15th</span>
                                 <span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
                                 <p class="card-text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -229,21 +256,83 @@
                             </div> 
                         </div>
                     </div>
-                </div>
-                <div class="row row-bottom-padded-md">
-                    <div class="col-lg-4 col-md-4">
-                <a class="twitter-timeline" data-lang="en" data-width="350" data-height="300" data-theme="light" href="https://twitter.com/KCProsecutor?ref_src=twsrc%5Etfw">Tweets by KCProsecutor</a>
-                </div>
+                </div>-->
+                </div> 
+                <div class="news">
+                    <div class="container">
+                    <div class="row">
+                            <div class="foo-2 col-md-4">
+                                    <div class="news-title">
+                                        <h4>News & Articles</h4>
+                                        </div>
+                                        <div id="newsbox">
+                                            <ul class="newswrap">
+                                                <li class="news-content">
+                                                    <a class="news-link" href="https://www.kingcounty.gov/depts/prosecutor/news-media-center/news/2018/April/Conner%20Michael%20Schierman.aspx"> <i class="fa fa-angle-double-right"></i>Convictions and Death Sentence Affirmed in Schierman Case</a>
+                                                    <span class="news-time">April 12, 2018</span>
+                                                    
+                                                </li>
+                                            </ul>
+                                        </div>
+                            </div>
+
+                    <div class="foo-3 col-md-4">
+                    <div class="new-title">
+                        <h4>Community & Speaking Engagements</h4>
+                    </div>
+                    <div id="newsbox">
+                        <p>Dan recently spoke at:</p>
+                        <ul class="newswrap">
+                            <li class="news-content"><i class="fa fa-angle-double-right"></i>Choices Program at Sylvester Middle School</li>
+                            <li class="news-content"><i class="fa fa-angle-double-right"></i>Public Defender Conference at Seattle University</li>
+                            <li class="news-content"><i class="fa fa-angle-double-right"></i>180 Program Fundraiser</li>
+                            <li class="news-content"><i class="fa fa-angle-double-right"></i>Retired Public Employees Council Meeting</li>
+                        </ul>
+                    </div>
+                    </div>
+
+                <div class="foo-4 news col-md-4">
+                        <div class="row row-bottom-padded-md">
+                                <a class="twitter-timeline" data-lang="en" data-width="350" data-height="300" data-theme="light" href="https://twitter.com/KCProsecutor?ref_src=twsrc%5Etfw">Tweets by KCProsecutor</a>
+                        </div>
+                        <br>
+                        <div class="foo-2">
+                            <h4>Subscribe to our newsletter</h4>
+                            <p style="font-style: italic">The Prosecutor's Post</p>
+                            <p>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Your email address">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                                    </span>
+                                </div>
+                            </p>
+                        </div>
+                         <br>
+                         <div class="foo-1">
+                         <h4>CONNECT WITH US</h4>
+                         <p>
+                                <div class="social-icons">
+                                        <ul class="nomargin">                    
+                                            <a href="https://www.facebook.com/kcprosecutor"><i class="fa fa-facebook-square fa-3x social" id="social"></i></a>
+                                            <a href="https://twitter.com/KCProsecutor"><i class="fa fa-twitter-square fa-3x social" id="social"></i></a>
+                                            <a href="https://www.linkedin.com/company/king-county-prosecuting-attorney's-office"><i class="fa fa-linkedin-square fa-3x social" id="social"></i></a>
+    
+                                        </ul>
+                                    </div>
+                         </p>
+                         </div>
                 </div>
             </div>
+        </div>
+        </div>
         </section>
         
       <!-- Team -->
-      <div class="arrow-down"></div>
       <section id="team">
         <div class="container">
-            <div class="row">
-                <h5 class="section-title h1">MEET OUR TEAM</h5>
+            <div class="row text-center">
+                <h2>MEET OUR TEAM</h2>
                 <p class="section-description">Get to know your King County prosecuting attorneys!</p>
             </div>
             <div class="row">
@@ -304,7 +393,7 @@
                                 <div class="frontside">
                                     <div class="card">
                                         <div class="card-body text-center">
-                                            <p><img class=" img-fluid" src="assets/images/mafe_rajul.jpg" alt="card image"></p>
+                                            <p><img class=" img-fluid" src="assets/images/otoole-profile1.jpg" alt="card image"></p>
                                             <h4 class="card-title">Scott O'Toole</h4>
                                             <p class="card-text">Senior Deputy Prosecutor</p>
                                         </div>
@@ -322,8 +411,10 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary btn-sm">VIEW TEAM</a>
-            </div>
+                </div>
+                        <div class="team-btn" style="padding-left: 45%">
+                            <a href="#" class="btn btn-secondary btn-sm">VIEW TEAM</a>
+                        </div>
         </div>
 </section>
 
@@ -380,31 +471,18 @@
                         <li class="widget-container widget_recent_news"><!-- widgets list -->
                             <h1 class="title-widget">Contact US</h1>
                                 <div class="footerp">
-                                    <h2 class="title-median">Prosecuting Attorney</h2>
-                                        <p><b>Contact Us</b> <a href="mailto:info@webenlance.com">info@kcprosecutor.com</a></p>
+                                        <p style="color:black"><b>Email</b> <a href="mailto:info@webenlance.com">info@kcprosecutor.com</a></p>
                                         <p>King County Courthouse</p>
                                         <p>516 Third Avenue, W400</p>
                                         <p>Seattle, WA 98104</p>
                                         <p>Hours: 8:30am - 4:30pm</p>
-                                        <!-- <div class="col-md-12 footer-ns animated fadeInRight"> -->
-                                                <h4>Subscribe to our newsletter</h4>
-                                                <p>The Prosecutor's Post</p>
-                                                <p>
-                                                    <div class="input-group">
-                                                      <input type="text" class="form-control" placeholder="Your email address">
-                                                      <span class="input-group-btn">
-                                                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                                                      </span>
-                                                    </div>
-                                                 </p>
-                                            <!-- </div> -->
                                 </div>
                                 <div class="social-icons">
                                     <ul class="nomargin">                    
-                                        <a href="#"><i class="fa fa-facebook-square fa-3x social" id="social"></i></a>
-                                        <a href="#"><i class="fa fa-twitter-square fa-3x social" id="social"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus-square fa-3x social" id="social"></i></a>
-                                        <a href="mailto:bootsnipp@gmail.com"><i class="fa fa-envelope-square fa-3x social" id="social"></i></a>
+                                        <a href="https://www.facebook.com/kcprosecutor"><i class="fa fa-facebook-square fa-3x social" id="social"></i></a>
+                                        <a href="https://twitter.com/KCProsecutor"><i class="fa fa-twitter-square fa-3x social" id="social"></i></a>
+                                        <a href="https://www.linkedin.com/company/king-county-prosecuting-attorney's-office"><i class="fa fa-linkedin-square fa-3x social" id="social"></i></a>
+
                                     </ul>
                                 </div>
                         </li>
@@ -418,7 +496,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="copyright">
-                            © 2018 King County, WA | Angela Zhou
+                            © 2018 King County, WA
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -431,6 +509,8 @@
                 </div>
             </div>
         </div>
+    </div>
+
 
         <!--last footer-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
@@ -440,5 +520,7 @@
         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
         <!--TWITTER-->
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!--FONT AWESOME-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </body>
 </html>

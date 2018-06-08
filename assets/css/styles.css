@@ -1,34 +1,131 @@
 body, html{
     height:100%;
     margin:0;
-    font-family: sans-serif;
+    font-family:'Open Sans', sans-serif !important;
 }
 
-.resized{
-    height: 50px !important;
+.title-widget, h1, h2, h5, h4{
+    font-family: 'Lato', sans-serif;
 }
 
-.hero{
+
+/* STICKY NAV */
+.navbar-brand-left {
+    display: inline-block;
+    margin: 0;
+    padding-left: 10px !important;
+    padding-top: 12px !important;
+    /* line-height: @navbar-height; */
+}
+
+.navbar-attorney {
+    position: -webkit-sticky;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+  }
+
+
+/* HERO */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) { 
+    /* styles for Retina-type displays */
+}
+
+
+.header__text-box{
+    text-align: left;
     background-image: url("../images/amanda_froh_hero.jpg"); 
-    background-size: cover;
-    background-position: center center;
+    background-size: 100%;
+    background-position: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.hero-inner{ 
-    height: 50%;
     width: 100vw;
     height: 100vh;
-    /* display:flex;
-    justify-content: center;
-    align-items: center; */
+    /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+
+}
+
+.header-text {
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.heading-primary{ 
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 8rem;
+    font-family: 'Lato', sans-serif;
 } 
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 0.75rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease out;
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    animation: moveInRight 1s ease-out;
+}
+
+
+/* ANIMATIONS */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0% /* when animation starts */{
+        opacity: 0;
+        transform: translateX(1rem);
+    }
+
+    80% {
+        transform: translateX(-1rem); 
+    }
+
+    100% /* when animation finishes */{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 
 
 /* PRIMARY BUTTONS */
 .btn.btn-circle { border-radius: 50px; background-color: transparent !important;}
-.btn.btn-primary{ border-radius: 50px; border:1px solid #d9534f; background-color: transparent;; color:#d9534f }
+.btn.btn-primary{ border-radius: 50px; border:1px solid #d9534f; background-color: transparent; color:#d9534f; }
+.btn.btn-secondary{ border-radius: 50px; border:1px solid #d9534f; background-color:#d9534f; color: #fff; }
+
 
 /* ARROWS */
 .arrow-down {
@@ -36,12 +133,27 @@ body, html{
     height: 0; 
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid grey;
+    border-top: 20px solid #f9f9f9;
     position: relative;
   left: 50%;
   transform: translateX(-50%);
   background-color: transparent;
   }
+
+.arrow-team {
+    position: absolute;
+    top:0;
+    color:white;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+    position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+}
 
 #team
 .news
@@ -51,21 +163,45 @@ body, html{
 
 /* SERVICES */
 .services-section {
-    background-color: rgb(219, 219, 219);
+    background-color: #f9f9f9;
 }
 
-.container {
-    margin: 0px 135px !important;
+
+.services-card-text {
+    color: #696969 !important;
+}
+
+.section-description {
+    color:#696969;
+}
+
+.services-card{
+    padding: 20px;
+    background: #fff !important;
+    margin:20px auto;
+    /*box-sizing: border-box;*/
+    height: 400px;
+    /* width: 300px !important;  */
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 }
 
 
 /* NEWS */
+.news ul li {
+    list-style-type: none;
+    color: #696969;
+}
 
+.news ul li a {
+    color: #696969;
+}
 
 
 /* TEAM */
 #team {
-    background: #eee !important;
+    background: #f9f9f9 !important;
 }
 
 .btn-primary:hover,
@@ -198,23 +334,4 @@ section .section-title {
     margin-top: 20px;
 }
 
-/* SERVICES */
-/* #services {
-    margin: 20px;
-} */
-.services-card{
-    padding: 20px;
-    background: #fff;
-    margin:20px auto;
-    /*box-sizing: border-box;*/
-    height: 400px;
-    /* width: 300px !important;  */
-    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-}
-
-.card-deck {
-    align-items: center !important;
-}
 
