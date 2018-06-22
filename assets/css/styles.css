@@ -4,8 +4,8 @@ body, html{
     font-family:'Open Sans', sans-serif !important;
 }
 
-.title-widget, h1, h2, h5, h4{
-    font-family: 'Lato', sans-serif;
+.title-widget, h1, h2, h5, h4, .services-section.services-card.card-title .news.news-card.news-title{
+    font-family: 'Lato', sans-serif !important;
 }
 
 
@@ -122,9 +122,27 @@ only screen and (min-resolution: 2dppx) {
 
 
 /* PRIMARY BUTTONS */
-.btn.btn-circle { border-radius: 50px; background-color: transparent !important;}
-.btn.btn-primary{ border-radius: 50px; border:1px solid #d9534f; background-color: transparent; color:#d9534f; }
-.btn.btn-secondary{ border-radius: 50px; border:1px solid #d9534f; background-color:#d9534f; color: #fff; }
+.btn.btn-circle { 
+    border-radius: 50px; 
+    background-color: transparent !important;
+}
+.btn.btn-primary{ 
+    border-radius: 50px; 
+    border:1px solid #d9534f; 
+    background-color: transparent; color:#d9534f; 
+}
+.btn.btn-secondary{ 
+    border-radius: 50px; 
+    border:1px solid #d9534f; 
+    background-color:#d9534f; color: #fff; 
+}
+
+.team-btn a:hover,
+.header__text-box.header_text.header-btn a:hover{
+    background-color: transparent;
+    border-color: #d9534f;
+    color: #d9534f;
+}
 
 
 /* ARROWS */
@@ -165,7 +183,6 @@ only screen and (min-resolution: 2dppx) {
 .services-section {
     background-color: #f9f9f9;
 }
-
 
 .services-card-text {
     color: #696969 !important;
@@ -211,7 +228,7 @@ only screen and (min-resolution: 2dppx) {
     box-shadow: none;
     outline: none;
     color:white !important;
-    cursor:poin ter;
+    cursor:pointer;
 }
 
 section {
